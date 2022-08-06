@@ -35,9 +35,9 @@ return <>
 
                     {value.length > 0
                     ?value.map(x => <SearchCard key={x._id} value={x} />)
-                    :(<div class="no-players">
+                    :(<div className="no-players">
                     <img src="images/internazionale_corpo.jpg" />
-                    <p class="no-player-text">No Found!...</p>
+                    <p className="no-player-text">No Found!...</p>
                     </div>)}
                     
                      </div>

@@ -49,3 +49,6 @@ The application has a list for all favorite players posted by users.
 
 The application has a page where the users can see only the players.
 
+### Search
+
+You can search for players case insensitive

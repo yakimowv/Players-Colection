@@ -37,7 +37,7 @@ function Create() {
             player.description === '') {
             addNotification(`All field are required !`, types.error)
         } 
-        if( !player.image.startsWith('http')){
+        else if( !player.image.startsWith('http')){
             addNotification(`Image must start with http`, types.error)
 
         }else {

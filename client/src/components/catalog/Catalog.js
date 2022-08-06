@@ -15,9 +15,9 @@ function Catalog() {
         {players.length > 0 ? (
           players.map((x) => <CatalogCard key={x._id} player={x} />)
         ) : (
-          <div class="no-players">
+          <div className="no-players">
           <img src="images/internazionale_corpo.jpg" />
-          <p class="no-player-text">No players here!...</p>
+          <p className="no-player-text">No players here!...</p>
           </div>
         )}
       </div>

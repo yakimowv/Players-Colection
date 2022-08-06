@@ -34,19 +34,19 @@ function Register() {
 
         if (password !== user.repas) {
             addNotification(`Passwords must be equal`, types.error)
-        } 
-        if (username === '' || email === '' || password === '') {
+        }else if (username === '' || email === '' || password === '') {
             addNotification(`All fields are required!`, types.error)
-        } else {
+        }else{
             authService.register(username, email, password)
-                .then(userData => {
-                    login(userData)
-                    navigate('/')
-                })
-                .catch(err => {
-                    addNotification(err, types.error)
-                })
-        }
+            .then(userData => {
+                login(userData)
+                navigate('/')
+            })
+            .catch(err => {
+                addNotification(err, types.error)
+            })
+            
+        } 
     }
 
     return (
