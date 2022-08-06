@@ -1,0 +1,114 @@
+.card-box {
+    padding: 20px;
+    margin-left: 120px;
+    background-position: right 35% bottom 45%;
+    box-sizing: border-box;
+    border-radius: 15px;
+    float: left;
+    height: 300px;
+    color: gold;
+    font-weight: bold;
+    margin-bottom: 70px;
+    margin-top: 20px;
+    background-color: black;
+} 
+
+.btn-group > a {
+	width: 200%;
+	height: 50px;
+	cursor: pointer;
+	border: none;
+    border-radius: 10px;
+	align-items: center;
+	justify-content: center;
+	background-color: gold;
+	background-size: 200% 100%;
+	background-position: left;
+	background-repeat: no-repeat;
+	transition: 500ms;
+    color: black;
+    font-family: "Lato";
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    padding: 10px;
+    text-decoration: none;
+    
+}
+
+.card-box > img {
+    display: block;
+    width: 300px;
+    height: 180px;
+    border-radius: 15px;
+
+}
+
+.btn-group {
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+
+.search {
+    width: 540px;
+    height: 60px;
+    margin: 100px auto;
+    background: rgba(31, 30, 30, 0.938);
+    border-radius: 3px;
+    box-shadow: 0px 0px 15px 10px rgba(86, 124, 194, 0.911);
+    background-color: #fff;
+}
+
+
+.search>input {
+    width: 340px;
+    padding: 10px 5px;
+    float: left;
+    color: rgb(3, 3, 3);
+    border: 0;
+    height: 60px;
+    font-size: 1.3em;
+    background: transparent;
+    border-radius: 3px 0 0 3px;
+}
+
+.search>input:focus {
+    outline: 0;
+    height: 60px;
+    background: transparent;
+}
+
+button {
+    position: relative;
+    float: right;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    height: 60px;
+    width: 120px;
+    font-size: 1.2em;
+    color: rgb(53, 49, 49);
+    background: rgb(207, 207, 214);
+    border-left: 1px solid rgb(180, 166, 166);
+    border-radius: 0 3px 3px 0;
+}
+
+
+
+.no-post {
+    width: 98%;
+    height: 440px;
+    display: block;
+    flex-wrap: wrap;
+    font-size: 90px;
+    color: blue;
+    padding-top: 140px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.no-posts>{
+    font-size: 44px;
+    font-style: italic;
+}

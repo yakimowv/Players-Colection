@@ -1,0 +1,18 @@
+.notifications {
+    background-color: darkblue;
+    margin: 0 auto;
+    text-align: center;
+    padding: 1%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-right: 0;
+    border-radius: 6px;
+    color: gold;
+    font-style: italic;
+    text-decoration: none;
+    box-shadow: 0 5px 10px gold;
+    width: 35%;
+    font-size: 27px;
+    border-radius: 10px;
+
+}

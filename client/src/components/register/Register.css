@@ -1,0 +1,89 @@
+
+.register-section {
+    background: url(https://cdn.shopify.com/s/files/1/0609/0096/6638/products/WFEDWF_740x.jpg?v=1641833154);
+    background-repeat: no-repeat;
+    background-position: 40% 60%;
+    margin: auto;
+    width: 740px;
+    height: 590px auto;
+    margin-top: 100px;
+    left: 35%;
+    text-align: center;
+    display: flex;
+    color:  gold
+}
+.register-info {
+    width: 250px;
+    padding: 55px 5px;
+}
+
+.register-info>h2 {
+    padding-top: 5.5em;
+    font-weight: 300;
+    font-size: 23px;
+}
+
+.register-info>p {
+    margin-top: 2px;
+    font-size: 18px;
+}
+.signupForm {
+    width: 540px;
+    padding: 30px 0;
+    background: rgba(20, 20, 20, .8);
+    transition: .1s;
+}
+
+.signupForm>h2 {
+    font-weight: 350;
+    font-size: 27px;
+    margin-bottom: 0.8em;
+}
+
+.login-Fields {
+    margin: 18px;
+    font-size: 20px;
+    padding: 10px;
+    width: 270px;
+    border: 1px solid gold;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background: rgba(20, 20, 20, 0.024);
+    color: white;
+}
+
+.register-li {
+    list-style-type: none;
+    padding: 0;
+    font-size: 27px;
+}
+
+#register-btn{
+    background:  gold;
+    font-size: 21px;
+    color: blue;
+    margin-top: 20px;
+    margin-right: 200px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+}
+
+#register-btn:hover{
+    background:black;
+    color: gold;
+}
+
+label {
+    display: block;
+    width: 100%;
+    margin-top: 0.6em;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-size: 24px;
+}
+

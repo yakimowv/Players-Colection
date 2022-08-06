@@ -1,0 +1,87 @@
+
+.trophy-container>h1 {
+    color: gold;
+    max-width: 100%;
+    font-size: 80px;
+    margin-top: -140px;
+    margin-left: -160px;
+    }
+  
+  .trophy-container>img {
+    height: 200px;
+    width: 400px;
+    max-width: 100%;
+    margin-left: -250px;
+    margin-top: -40px;
+
+}
+  
+  .trophy {
+    margin-left: 349px;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-evenly;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    height: 110px;
+}
+.Logo{
+    margin-left: 1rem;
+    margin-top: 15px;
+    color: white;
+    height: 210px;
+    font-size: 10px;
+    font-weight: bolder;
+}
+.item{
+display: flex;
+}
+.ul{
+    display: flex;
+    margin: 25px;
+}
+.ul li {
+    margin: 0 2rem;
+    height: 100%;
+}
+.nav-btn{
+    color: rgb(3, 125, 255);
+    text-decoration: none;
+    font-weight: bolder;
+    cursor: pointer;
+    padding: 0.1rem;
+    font-size: 27px;
+}
+.nav-btn:active{
+    font-weight: bold;
+    color: white;
+    background-color:  blue;
+    border-radius: 50px;
+}
+.nav-btn:hover{
+    font-weight: bold;
+    color: white;
+    background-color:  blue;
+    border-radius: 50px;
+}
+.sign-in{
+    color:blue;
+    text-decoration: none;
+    font-weight: bolder;
+    border-style: solid;
+    border-color: gold;
+    border-radius: 25px;
+    background-color: gold;
+    cursor: pointer;
+    padding: 0.1rem;
+    font-size: 27px;
+}

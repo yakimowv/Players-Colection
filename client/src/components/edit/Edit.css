@@ -1,0 +1,61 @@
+.edit-section {
+    background: url(https://indwallpapers.com/wp-content/uploads/2021/03/Inter-Milan-Wallpapers.jpg);
+    background-repeat: no-repeat;
+    background-position: 100% 5%;
+    margin: auto;
+    width:680px;
+    height: 850px;
+    margin-top: 1rem;
+    left: 35%;
+    text-align: center;
+    display: flex;
+    color: gold;
+}
+
+textarea {
+    resize: none;
+}
+
+.input-place-edit{
+    margin: 18px;
+    font-size: 20px;
+    padding: 10px;
+    width: 270px;
+    border: 1px solid gold;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background: rgba(20, 20, 20, .2);
+    color: white;
+    outline: none;
+}
+
+.edit-form {
+    margin-top: 60px;
+    width: 720px;
+    padding: 10px 0;
+    transition: .2s;
+}
+
+.edit-form>h2 {
+    font-weight: 350;
+    font-size: 27px;
+    margin-bottom: 0.8em;
+}
+
+#edit-btn {
+    border: 1px solid gold;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.652);
+    font-size: 20px;
+    color: gold;
+    margin-top: 1px;
+    margin-right: 60px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+#edit-btn:hover {
+   background: rgba(255, 217, 0, 0.691);
+   color: black; 
+}

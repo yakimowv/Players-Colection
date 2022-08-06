@@ -1,0 +1,86 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.login-section {
+    background: url(https://dd3c0277eb0ba4b622c7-1d33e4d5be9d7f3a6e7b87bf6871b867.ssl.cf1.rackcdn.com/IMG_DIR/2018/12/21/DSC_8583-2018-12-21-5.jpg);
+    background-repeat: no-repeat;
+    background-position: 40% 60%;
+    margin: auto;
+    width: 720px;
+    height: 370px auto;
+    margin-top: 7em;
+    margin-bottom: 7em;
+    left: 35%;
+    text-align: center;
+    display: flex;
+    color:  gold
+}
+
+
+
+.login-info>h2 {
+    padding-top: 5.5em;
+    font-weight: 300;
+    font-size: 50px;
+}
+
+.info>p {
+    margin-top: 2px;
+    font-size: 18px;
+}
+
+.loginForm {
+    width: 580px;
+    padding: 30px 0;
+    background: rgba(20, 40, 40, .8);
+}
+
+.loginForm>h2 {
+    font-weight: 350;
+    font-size: 50px;
+    margin-bottom: 0.8em;
+}
+
+.login-fields {
+    margin: 18px;
+    font-size: 20px;
+    padding: 10px;
+    width: 270px;
+    border: 1px solid gold;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background: rgba(20, 20, 20, .2);
+    color: white;
+    outline: none;
+}
+
+#login-btn {
+    background:  gold;
+    font-size: 21px;
+    color: blue;
+    margin-top: 20px;
+    margin-right: 200px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+
+}
+#login-btn:hover {
+    background:black;
+    color: gold;
+}
+
+label {
+    display: block;
+    width: 100%;
+    margin-top: 0.6em;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-size: 17px;
+    text-align: center;
+}
+
