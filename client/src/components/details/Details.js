@@ -65,12 +65,13 @@ function Details() {
             playerServices.deletPlayer(playerId)
                 .then(() => {
                     deletePlayer(playerId);
-                    navigate('/my-profile')
-                    
+                    navigate('/')       
                 })
                 .catch(err => {
                     addNotification(err, types.error)
                 })
+        }else{
+            navigate(`/details/${playerId}`)
         }
     }
 
@@ -97,7 +98,7 @@ function Details() {
                         {userId && (userId === currentPlayer._ownerId
                             ? <>
                             <Link to={`/edit/${currentPlayer._id}`} className="edit-btn">Edit</Link>
-                            <Link to={`/delete/${currentPlayer._id}`} onClick={gameDeleteHandler} className="del-btn">Delete</Link>
+                            <button to={`/delete/${currentPlayer._id}`} onClick={gameDeleteHandler} className="del-btn">Delete</button>
                                 </>
                             : isLke
                             ?<p className="thanks-for-like">Thanks For The Like</p>

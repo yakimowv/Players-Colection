@@ -97,6 +97,8 @@
 .del-btn {
     background-color: black;
     text-decoration: none;
+    margin-right: 300px;
+    margin-top: -20px;
 }
 .del-btn:hover {
     background-color: gold;
