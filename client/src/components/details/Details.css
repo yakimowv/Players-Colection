@@ -97,8 +97,9 @@
 .del-btn {
     background-color: black;
     text-decoration: none;
-    margin-right: 300px;
-    margin-top: -20px;
+    height: 50px;
+    margin-right: 330px;
+    margin-top: -15px;
 }
 .del-btn:hover {
     background-color: gold;
@@ -153,6 +154,7 @@ span {
     letter-spacing: .05em;
     margin: 2em 0 0 0;
 }
+
 
 .likes {
     font-size: 20px;
