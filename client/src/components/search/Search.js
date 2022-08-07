@@ -24,7 +24,6 @@ const textSubmit=(e)=>{
     }
 }
 
-console.log(value)
 return <>
             <form className="search" onSubmit={textSubmit}>
                 <input type="search" id="button" name="text" onChange={onSearchChange} value={text} placeholder="Search here..."/>

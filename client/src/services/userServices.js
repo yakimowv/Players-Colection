@@ -20,14 +20,20 @@ async function login(email, password) {
 };
 
 async function register(username, email, password,) {
-    return fetch(`${baseUrl}/register`, {
+    let res=await fetch(`${baseUrl}/register`, {
         method: 'POST',
         headers: {
             'content-type': 'application/json'
         },
         body: JSON.stringify({ username, email, password, })
     })
-        .then(res => res.json());
+    let jsonResult = await res.json();
+
+    if (res.ok) {
+        return jsonResult;
+    } else {
+        throw jsonResult.message;
+    }
 };
 
 async function logout(token) {

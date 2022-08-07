@@ -1,7 +1,7 @@
 import './Details.css'
 
 import React, { useContext, useEffect,} from 'react'
-import { Link, useNavigate, useParams } from 'react-router-dom'
+import { Link,useNavigate, useParams} from 'react-router-dom'
 
 
 import { useNotificationContext, types } from '../../contexts/NotificationContext'
@@ -38,7 +38,6 @@ function Details() {
             })();
     },[])
 
-
     const likeBtnHandler =(e)=>{
         e.preventDefault()
         if (isOwner) {
@@ -58,6 +57,7 @@ function Details() {
     }
 
 
+
     const gameDeleteHandler = () => {
         const confirmation = window.confirm(`Are you sure you want to DELETE this PLAYER: ${currentPlayer.name}?`);
 
@@ -65,7 +65,8 @@ function Details() {
             playerServices.deletPlayer(playerId)
                 .then(() => {
                     deletePlayer(playerId);
-                    navigate('/best-players');
+                    navigate('/my-profile')
+                    
                 })
                 .catch(err => {
                     addNotification(err, types.error)

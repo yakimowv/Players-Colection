@@ -83,6 +83,7 @@ export const PlayersProvider = ({ children }) => {
             playerId
         })
     }
+  
     const fetchPlayerDetails = (playerId, playerDetails) => {
         dispatch({
             type: 'FETCH_PLAYER_DETAILS',

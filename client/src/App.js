@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
+import { lazy,Suspense } from 'react';
 import './App.css'
 
 import { AuthProvider } from "./contexts/AuthContext";
@@ -7,23 +8,25 @@ import { PlayersProvider } from "./contexts/PlayersContext";
 
 import Navbar from "./components/navbar/Navbar";
 import Home from "./components/home/Home";
-import Login from "./components/login/Login";
-import Register from "./components/register/Register";
 import Footer from "./components/footer/Footer";
 import Create from "./components/create/Create";
-import Catalog from "./components/catalog/Catalog";
 import NotFound from "./components/404/NotFound";
-import MyProfile from "./components/my-profile/MyProfile";
-import Search from "./components/search/Search";
 import Logout from "./components/logout/Logout";
 import GuardesForNotLogin from "./components/common/guardes/GuardesForNotLogin";
 import GuardesForLogin from "./components/common/guardes/GuardesForLogin";
-import Details from './components/details/Details';
-import Edit from './components/edit/Edit';
 import ErrorBoundary from './components/common/notificAndError/ErrorBoundary';
 import { NotificationProvider } from './contexts/NotificationContext';
 import Notification from './components/common/notificAndError/Notification';
 import GameOwnerGard from './components/common/guardes/GameOwnerGard';
+import Loading from './components/common/Loading';
+
+const Register = lazy(() => import('./components/register/Register')); 
+const Catalog = lazy(() => import('./components/catalog/Catalog')); 
+const Login = lazy(() => import('./components/login/Login')); 
+const Details = lazy(() => import('./components/details/Details')); 
+const Search = lazy(() => import('./components/search/Search')); 
+const Edit = lazy(() => import('./components/edit/Edit')); 
+const MyProfile = lazy(() => import('./components/my-profile/MyProfile')); 
 
 
 function App() {
@@ -35,39 +38,62 @@ function App() {
                     <div>
                         <Navbar />
                         <Notification />
-
-                        <PlayersProvider>
-
-                            
-                    
-            
-                            <main id='main'>
-                                
-                                <Routes>
+                        <PlayersProvider>                           
+                            <main id='main'>                      
+                    <Routes>
                                     <Route path="/" element={<Home />} />
-                                    <Route path="/best-players" element={<Catalog />} />
-                                    <Route path="/search" element={<Search />} />
-                                    <Route path='/details/:playerId' element={<Details />} />
 
-                                    <Route element={<GuardesForLogin />}>
-                                        <Route path="/login" element={<Login />} />
-                                        <Route path="/register" element={<Register />} />
-                                    </Route>
+                                    <Route path="/best-players" element={
+                                        <Suspense fallback={<Loading/>}>
+                                                   <Catalog />
+                                        </Suspense>} />
+                                        
+                                    <Route path="/search" element={
+                                        <Suspense fallback={<Loading/>}>
+                                                   <Search />
+                                        </Suspense>} />
+                                    
+                                    <Route path='/details/:playerId' element={
+                                        <Suspense fallback={<Loading/>}>
+                                                   <Details />
+                                        </Suspense>} />
 
-                                    <Route element={<GuardesForNotLogin />}>
+                            <Route element={<GuardesForLogin />}>
+
+                                    <Route path="/login" element={
+                                        <Suspense fallback={<Loading/>}>
+                                            <Login />
+                                        </Suspense>} 
+                                    />
+
+                                        <Route path="/register" element={
+                                        <Suspense fallback={<Loading/>}>
+                                                   <Register />
+                                        </Suspense>} />
+
+                            </Route>
+
+                            <Route element={<GuardesForNotLogin />}>
                                     <Route element={<GameOwnerGard />}>
-                                        <Route path='/edit/:playerId' element={<Edit />} />
-                                    </Route>
-                                    </Route>
+                                        <Route path='/edit/:playerId' element={
+                                        <Suspense fallback={<Loading/>}>
+                                                   <Edit />
+                                        </Suspense>} />
 
-                                    <Route element={<GuardesForNotLogin />}>
+                                    </Route>
+                            </Route>
+
+                            <Route element={<GuardesForNotLogin />}>
                                         <Route path="/logout" element={<Logout />} />
                                         <Route path="/add" element={<Create />} />
-                                        <Route path="/my-profile" element={<MyProfile />} />
-                                    </Route>
+                                        <Route path="/my-profile" element={
+                                        <Suspense fallback={<Loading/>}>
+                                                   <MyProfile />
+                                        </Suspense>} />
+                            </Route>
                                     <Route path="/404" element={<NotFound />} />
                                     <Route path="*" element={<NotFound />} />
-                                </Routes>
+                    </Routes>
                             </main>
                         </PlayersProvider>
 

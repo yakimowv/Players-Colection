@@ -1,7 +1,5 @@
 import './Notification.css';
 
-import { Toast } from 'react-bootstrap';
-
 import { useNotificationContext } from '../../../contexts/NotificationContext';
 
 const Notification = () => {
@@ -12,11 +10,11 @@ const Notification = () => {
     }
 
     return (
-        <Toast className="notifications" bg={notification.type} onClose={hideNotification}>
-            <Toast.Body>
+        <div className="notifications" bg={notification.type} onClose={hideNotification}>
+            <p>
                 {notification.message}
-            </Toast.Body>
-        </Toast>
+            </p>
+        </div>
     );
 };
 
