@@ -28,6 +28,8 @@ function Register() {
 
     const submitHandler = (e) => {
         e.preventDefault()
+
+        const emailRegEx = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(.\w{2,3})+$/;
         const username = user.username
         const email = user.email
         const password = user.password
@@ -36,6 +38,8 @@ function Register() {
             addNotification(`Passwords must be equal`, types.error)
         }else if (username === '' || email === '' || password === '') {
             addNotification(`All fields are required!`, types.error)
+        }else if (!(emailRegEx.test(email))){
+            addNotification(`Enter a valid email!`, types.error)
         }else{
             authService.register(username, email, password)
             .then(userData => {
